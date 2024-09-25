@@ -1,7 +1,7 @@
 import { Persona } from "./persona"
 
 
-class Empleado extends Persona{
+export class Empleado extends Persona{
     salario: number
 
     constructor(nombre:string, edad:number, salario:number){
@@ -13,7 +13,7 @@ trabajar(horas:number){
 }
 
 saludar(): void {
-    console.log(`Hola! ${this.nombre} tu edad es ${this.getEdad()} y el salario es de: ${this.salario} `)
+    console.log(`Hola! ${this.nombre}, tu edad es ${this.getEdad()} y el salario es de: ${this.salario} `)
 }
 }
 const Empleado1 = new Empleado ("Andres", 30, 2000)

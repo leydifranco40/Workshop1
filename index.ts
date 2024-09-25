@@ -1,4 +1,5 @@
 import {Persona} from "./persona"
+import {Empleado} from "./empleado"
 
 const personas:Persona[] = [
     new Persona("Juan", 18),
@@ -15,3 +16,19 @@ const personas:Persona[] = [
 ]
 
 personas.forEach(persona => persona.saludar())
+
+
+const empleados:Empleado[] = [
+    new Empleado("Juan", 18, 2000),
+    new Empleado("Andres", 25,2500),
+    new Empleado("Daniel", 25, 3500),
+    new Empleado("Marcela", 18, 2000),
+    new Empleado("Sebastian", 30, 5000),
+    new Empleado("Manuela", 36, 5400),
+    new Empleado("Leydi", 27, 4500),
+    new Empleado("Cristian", 19, 3000),
+    new Empleado("Sara", 15, 2200),
+    new Empleado("Camila", 18, 2000),
+]
+
+empleados.forEach(empleado => empleado.saludar())
