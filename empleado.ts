@@ -1,11 +1,12 @@
+import { Direccion } from "./direccion"
 import { Persona } from "./persona"
 
 
 export class Empleado extends Persona{
     salario: number
 
-    constructor(nombre:string, edad:number, salario:number){
-        super(nombre, edad)
+    constructor(nombre:string, edad:number, salario:number, direccion:Direccion){
+        super(nombre, edad, direccion)
         this.salario = salario
     }
 trabajar(horas:number){
@@ -13,9 +14,7 @@ trabajar(horas:number){
 }
 
 saludar(): void {
-    console.log(`Hola! ${this.nombre}, tu edad es ${this.getEdad()} y el salario es de: ${this.salario} `)
+    console.log(`Hola! ${this.nombre}, tu edad es ${this.getEdad()} el salario es de: ${this.salario} y vives en ${this.direccion.ciudad}`)
 }
 }
-const Empleado1 = new Empleado ("Andres", 30, 2000)
-Empleado1.saludar()
-Empleado1.trabajar(8)
+

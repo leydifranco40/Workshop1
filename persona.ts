@@ -1,10 +1,14 @@
+import { Direccion } from "./direccion"
+
 export class Persona{
     nombre: string
     private edad: number
+    direccion:Direccion
 
-    constructor(nombre:string, edad:number){
+    constructor(nombre:string, edad:number, direccion: Direccion){
         this.nombre = nombre
         this.edad = edad
+        this.direccion = direccion
     }
 
     getEdad():number{
@@ -13,13 +17,12 @@ export class Persona{
     }
     
     saludar():void{
-        console.log(`Hola!, tu nombre es: ${this.nombre} y tienes ${this.getEdad()} años ` )
+        console.log(`Hola!, tu nombre es: ${this.nombre}, tienes ${this.getEdad()} años, y vives en ${this.direccion.ciudad}` )
     }
 
 }
 
-const persona1 = new Persona("Santiago", 29)
-persona1.saludar()
+
 
 
    
