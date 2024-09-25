@@ -11,10 +11,17 @@ export class Persona{
         return this.edad
 
     }
+    
     saludar():void{
-        console.log(`Tu nombre es: ${this.nombre} y tienes ${this.getEdad} años ` )
+        console.log(`Hola!, tu nombre es: ${this.nombre} y tienes ${this.getEdad()} años ` )
     }
+
 }
 
 const persona1 = new Persona("Santiago", 29)
 persona1.saludar()
+
+
+   
+
+    
