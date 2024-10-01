@@ -1,3 +1,8 @@
+import { Empleado } from "./empleado"
+import { Direccion } from "./direccion"
+import { Vehiculo } from "./vehiculo";
+
+const listaEmpleadosJSON = `
 [
     {
         "nombre": "Andres",
@@ -94,3 +99,23 @@
 
 
 ]
+`
+const deserializarEmpleados = (json:string): Empleado[] => {
+    const empleadosJson = JSON.parse(json)
+    return empleadosJson.map((emp: any) => {
+        const direccion: Direccion = {
+            calle: emp.direccion.calle,
+            ciudad: emp.direccion.ciudad,
+            pais: emp.direccion.pais
+        }
+        return new Empleado(emp.nombre, emp.edad, emp.salario, emp.direccion, emp.Vehiculo);
+
+    });
+};
+
+// Deserializando la lista de empleados
+const empleados = deserializarEmpleados(listaEmpleadosJSON);
+
+// Imprimir saludos de los empleados
+empleados.forEach(empleado => empleado.saludar());
+
