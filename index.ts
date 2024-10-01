@@ -14,7 +14,7 @@ const direccion9: Direccion = {calle:"calle 45 # 66",ciudad:"Pereira", pais:"Col
 const direccion10:Direccion = {calle:"calle 66 # 145",ciudad:"Yopal", pais:"Colombia"}
 
 const personas:Persona[] = [
-    new Persona("Juan", 18, direccion1),
+    new Persona ("Juan", 18, direccion1),
     new Persona("Andres", 20, direccion2),
     new Persona("Daniel", 25, direccion3),
     new Persona("Marcela", 18, direccion4),
@@ -24,8 +24,8 @@ const personas:Persona[] = [
     new Persona("Cristian", 19, direccion8),
     new Persona("Sara", 15, direccion9),
     new Persona("Camila", 18, direccion10),
-
 ]
+
 console.log("----PERSONAS----")
 personas.forEach(persona => persona.saludar())
 

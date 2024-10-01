@@ -1,5 +1,6 @@
 import { Direccion } from "./direccion"
 
+
 export class Persona{
     nombre: string
     private edad: number
@@ -17,11 +18,12 @@ export class Persona{
     }
     
     saludar():void{
-        console.log(`Hola!, tu nombre es: ${this.nombre}, tienes ${this.getEdad()} años, y vives en ${this.direccion.ciudad}` )
+        console.log(`Hola!, tu nombre es: ${this.nombre}, tienes ${this.getEdad()} años y vives en ${this.direccion.ciudad}` )
     }
 
 }
 
+ 
 
 
 
