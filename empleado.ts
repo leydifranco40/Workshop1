@@ -1,4 +1,5 @@
 import { Direccion } from "./direccion"
+import { EstadoCivil } from "./estadoCivil"
 import { Persona } from "./persona"
 import { Vehiculo } from "./vehiculo"
 
@@ -6,8 +7,8 @@ import { Vehiculo } from "./vehiculo"
 export class Empleado extends Persona{
     salario: number
 
-    constructor(nombre:string, edad:number, salario:number, direccion:Direccion, vehiculos:Vehiculo[]){
-        super(nombre, edad, direccion, vehiculos)
+    constructor(nombre:string, edad:number, salario:number, direccion:Direccion, vehiculos:Vehiculo[], estadoCivil:EstadoCivil){
+        super(nombre, edad, direccion, vehiculos, estadoCivil)
         this.salario = salario
     }
 trabajar(horas:number){

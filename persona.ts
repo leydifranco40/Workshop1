@@ -1,5 +1,6 @@
 import { Direccion } from "./direccion"
 import { Vehiculo } from "./vehiculo"
+import { EstadoCivil } from "./estadoCivil"
 
 
 export class Persona{
@@ -7,12 +8,14 @@ export class Persona{
     private edad: number
     direccion:Direccion
     vehiculos: Vehiculo[]
+    estadoCivil: EstadoCivil
 
-    constructor(nombre:string, edad:number, direccion: Direccion, vehiculos: Vehiculo[]){
+    constructor(nombre:string, edad:number, direccion: Direccion, vehiculos: Vehiculo[], estadoCivil:EstadoCivil){
         this.nombre = nombre
         this.edad = edad
         this.direccion = direccion
         this.vehiculos = vehiculos
+        this.estadoCivil = estadoCivil
     }
 
     getEdad():number{

@@ -108,7 +108,7 @@ const deserializarEmpleados = (json:string): Empleado[] => {
             ciudad: emp.direccion.ciudad,
             pais: emp.direccion.pais
         }
-        return new Empleado(emp.nombre, emp.edad, emp.salario, emp.direccion, emp.Vehiculo);
+        return new Empleado(emp.nombre, emp.edad, emp.salario, emp.direccion, emp.Vehiculo, emp.estadoCivil);
 
     });
 };

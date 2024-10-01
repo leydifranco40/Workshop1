@@ -1,11 +1,12 @@
 import { Persona } from "./persona";
 import { Direccion } from "./direccion"; // Dirección es una interfaz
+import { EstadoCivil } from "./estadoCivil";
 
 
 const jsonApersona = (textoJson: string): Persona => {
     const objetoJson = JSON.parse(textoJson);  
-    const { nombre, edad, direccion, vehiculos } = objetoJson;
-    return new Persona(nombre, edad, direccion, vehiculos);  
+    const { nombre, edad, direccion, vehiculos, estadoCivil } = objetoJson;
+    return new Persona(nombre, edad, direccion, vehiculos, estadoCivil);  
 };
 
 
