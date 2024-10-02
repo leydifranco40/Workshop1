@@ -4,15 +4,15 @@ export abstract class Vehiculo {
 }
 
 
-export class Choche extends Vehiculo{
+export class Coche extends Vehiculo{
 
     arrancar(): void {
-        console.log("El carro arranca acelerando con el pie")
+        console.log("El empleado tiene un carro")
     }
 }
 
 export class Moto extends Vehiculo{
     arrancar(): void {
-        console.log ("La moto arranca acelerando con la mano")
+        console.log ("El empleado tiene una moto")
     }
 }
